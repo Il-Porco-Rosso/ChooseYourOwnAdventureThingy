@@ -11,13 +11,15 @@ public class ChooseYourOwnAdventureThingy
             if (prompt("explore", "jump over")) { //doesnt matter
                 System.out.println("You climb down the hill and jump into the trench.");
             } else {
-                System.out.println("You try to jump over, but you slip and fall into the trench anyway.\nDo you still want to get out?");
-                if (promptYesOrNo()) {
+                System.out.println("You try to jump over, but you slip and fall into the trench anyway.");
+            } //cannon trench exploring + food
+            border(2); //------------------------------
+            System.out.println("The trench is long and full of snow.\nPanels and boards line the sides as far as the trench goes. \nSpent shell casings are buried in the ground. \nA few steps away is what looks like two snowed-in bunkers, well, only one is snowed-in, the other is boarded up. \nWhich one would you like to go in?");
+            if (prompt("the snowed-in one", "the boarded up one")) {
+                
+            } else {
 
-                }
             }
-            
-
 
 
         } else { //dead end
