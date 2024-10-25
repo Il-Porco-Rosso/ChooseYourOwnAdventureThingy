@@ -4,14 +4,27 @@ public class ChooseYourOwnAdventureThingy
 {
     public static void main(String[] args)
     {
-        System.out.println("Would you like to go fishing?");
-        if (promptYesOrNo()) {
-            System.out.println("You cast your rod, \nbut you forget your bait. \nWould you like to reel in?");
-            if (promptYesOrNo()) {
-                
+        border(5);
+        System.out.println("The snow covers all the eye can see. Only hills and a handful of trees dot the grey and white landscape. \nWould you like to venture forth?");
+        if (promptYesOrNo()) { //cannon path
+            System.out.println("You walk forward and reach a hill. \nOver the hill, you see a long trench at the bottom with wood bracing holding the dirt and snow from collapsing the trench.\nDo you want to explore it or try to jump over?");
+            if (prompt("explore", "jump over")) { //doesnt matter
+                System.out.println("You climb down the hill and jump into the trench.");
+            } else {
+                System.out.println("You try to jump over, but you slip and fall into the trench anyway.\nDo you still want to get out?");
+                if (promptYesOrNo()) {
+
+                }
             }
+            
+
+
+
+        } else { //dead end
+            border(0);
+            System.out.println("You freeze to death from sitting there in the cold without doing anything.");
         }
-        border(0);
+        
         System.out.println("The end");
     }
 
@@ -46,8 +59,7 @@ public class ChooseYourOwnAdventureThingy
         Scanner sc = new Scanner(System.in);
         boolean validAnswer = false;
         String userAnswer = "";
-        while (!validAnswer)
-        {
+        while (!validAnswer) {
             System.out.println("=====================================================");
             System.out.print("Answer "+optionA+" or "+optionB+": ");
             userAnswer = sc.nextLine();
@@ -63,13 +75,11 @@ public class ChooseYourOwnAdventureThingy
         return false;
     }
 
-    public static int prompt(String optionA, String optionB, String optionC) //prompts a, b, or c and returns 1, 2, or 3 respectively
-    {
+    public static int prompt(String optionA, String optionB, String optionC) { //prompts a, b, or c and returns 1, 2, or 3 respectively 
         Scanner sc = new Scanner(System.in);
         boolean validAnswer = false;
         String userAnswer = "";
-        while (!validAnswer)
-        {
+        while (!validAnswer) {
             System.out.println("=====================================================");
             System.out.print("Answer "+optionA+", "+optionB+", or "+optionC+": ");
             userAnswer = sc.nextLine();
