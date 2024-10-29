@@ -16,8 +16,14 @@ public class ChooseYourOwnAdventureThingy
             border(2); //------------------------------
             System.out.println("The trench is long and full of snow.\nPanels and boards line the sides as far as the trench goes. \nSpent shell casings are buried in the ground. \nA few steps away is what looks like two snowed-in bunkers, well, only one is snowed-in, the other is boarded up. \nWhich one would you like to go in?");
             if (prompt("the snowed-in one", "the boarded up one")) {
-                
-            } else {
+                System.out.println("You dig your way in. \nInside is a small, cramped room with poorly held dirt walls, held by dry wood panels.\n The ceiling is only held up by one plank.\nOther than the first few feet, there is no light. \nHow will you light up the room?");
+                if (prompt("start a fire and possibly stay the night", "get out a flashlight and leave when finished")) {//death lol
+                    System.out.println("You get out some flamable material and light it with a match. \nThe bits of sticks dont light easily, so you blow a bit of air into the pile. \nEventually, the fire flares up. \nHooray! \n...but because it's a small room, the fire spreads to the dry wood, inches away from the pile, setting the only thing holding the dirt up on fire. \nSoon after, all the dirt falls on top of you and you suffocate to death.");
+                    break;
+                } else {
+
+                }
+            } else { //cannon route (goes in boarded bunker with thr dude)
 
             }
 
