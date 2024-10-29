@@ -82,7 +82,7 @@ public class ChooseYourOwnAdventureThingy
                         System.out.println("'Oh it looks like a glitch has happened with the amount of canned goods for some reason.'");
                     }
                     //prompt snowstorm thing here
-                    coin = prompt("Stay near the tree", "Venture forth", "Backtrack to the bunker");
+                    coin = prompt("stay near the tree", "venture forth", "backtrack to the bunker");
                     if (coin == 1) { //stay
                         System.out.println("You sit down and wait. \nYou sit and wait. \nSit and wait. \nSit, wait. \nWait. \nwait \nwai");
                         border(0);
@@ -93,15 +93,17 @@ public class ChooseYourOwnAdventureThingy
                             if (cannedGoods > 1) {
                                 System.out.println(" you and your cans of soup freeze to death.");
                             } else if (cannedGoods == 1) {
-                                System.out.println(" you and you pig stew freeze to death.");
+                                System.out.println(" you and your pig stew freeze to death.");
                             } else {
-                                System.out.println(" you and you empty bag freeze to death. \nSo sad.");
+                                System.out.println(" you and your empty bag freeze to death. \nSo sad.");
                             }
                         }
                     } else if (coin == 2) {// go forth
 
-                    } else {// go back
+    //tbd
 
+                    } else {// go back
+                        System.out.println("You try to backtrack to the trench that is miles away. \nIt took hours to get from the trench to where you are, but the snowstorm only took an hour to get to you, and 30 minutes to kill you.");
                     }
                 }
 
