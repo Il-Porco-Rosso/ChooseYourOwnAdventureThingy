@@ -145,8 +145,10 @@ public class ChooseYourOwnAdventureThingy
             }
         }
         if (userAnswer.equals("yes")) {
+            border(5);
             return true;
         }
+        border(5);
         return false;
     }
 
@@ -166,8 +168,10 @@ public class ChooseYourOwnAdventureThingy
             }
         }
         if (userAnswer.equals(optionA)) {
+            border(5);
             return true;
         }
+        border(5);
         return false;
     }
 
@@ -186,10 +190,13 @@ public class ChooseYourOwnAdventureThingy
             }
         }
         if (userAnswer.equals(optionA)) {
+            border(5);
             return 1;
         } else if (userAnswer.equals(optionB)) {
+            border(5);
             return 2;
         } else {
+            border(5);
             return 3;
         }
     }
