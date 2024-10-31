@@ -99,7 +99,27 @@ public class ChooseYourOwnAdventureThingy
                             }
                         }
                     } else if (coin == 2) {// go forth
+                        System.out.println("You venture onward hoping to find shelter. \nSadly though, there is nothing in sight, just white & grey. \nOh? Wait! No, there is something here.");
+                        border(1);
+                        System.out.println("You see a very small town ahead. \nOnly a few small buildings barely taller than you are, and only slightly thinner than a large car. \nIn the closer one, you see a light. \nGo in?");
+                        if (promptYesOrNo()) {// meets dudes in cloaks
+                            System.out.println("You open the door and step downward into the small muddy building. \nThree dudes look at you. \nAll of them wear black parkas & black cloaks with guns slung around them. \nOne of them is trying to start a fire in the middle.");
+                            if (gun > 0) {
+                                System.out.println("They notice your rifle and point theirs directly at your head. \nWhat will you do?");
+                                coin =prompt("run away", "offer food", "shoot them");
+                                if (coin == 1) {
+                                    System.out.println("You try to turn and run and you make it out. \nThere is a snow storm outside. \nSo, you go back in. \nThey immediately shoot you as you open the door.");
+                                } else if (coin ==2) {//"cannon" end (cannon end is in a different branch)
+                                    if (freshFood > 0) {
+                                        System.out.println("To quell the chaos, you pull out your trump card of trump cards... \n...you show them the rabbit meat. \nThe three guys notice you're friendly, and welcome you in.");
+                                    } 
+                                } else {
+                                    System.out.println("You pull out you rifle. \nYou immediately get shot three times at once. \nYou die.");
+                                }
+                            }
+                        } else { //goes to the other thing
 
+                        }
     //tbd
 
                     } else {// go back
@@ -122,6 +142,7 @@ public class ChooseYourOwnAdventureThingy
         }
         
         System.out.println("The end");
+        border(1);
     }
 
     //==========================================================================================================//
