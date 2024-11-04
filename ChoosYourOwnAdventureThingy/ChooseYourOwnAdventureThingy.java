@@ -111,13 +111,21 @@ public class ChooseYourOwnAdventureThingy
                                     System.out.println("You try to turn and run and you make it out. \nThere is a snow storm outside. \nSo, you go back in. \nThey immediately shoot you as you open the door.");
                                 } else if (coin ==2) {//"cannon" end (cannon end is in a different branch)
                                     if (freshFood > 0) {
-                                        System.out.println("To quell the chaos, you pull out your trump card of trump cards... \n...you show them the rabbit meat. \nThe three guys notice you're friendly, and welcome you in.");
-                                    } 
+                                        System.out.println("To quell the chaos, you pull out your trump card of trump cards... \n...you show them the rabbit meat. \nThe three guys then stop, look at each other, and look at you again.\nThey put the rifles down and one chuckles. \nThey welcome you in.");
+                                    } else if (cannedGoods > 1) {
+                                        System.out.println("To quell the chaos, you pull out your cans of soup and offer it to them, trying your best not to look like you're pulling out another weapon. \nThe three guys the stop to put their rifles back down.\nOne of them gets some cans of their own out of their parka. \nThey go up to you and compare their cans to yours. \nTheirs: clam pasta, yours: pork stew & soup. \nThe one in front of you smiles and they welcome you in.");
+                                    } else if (cannedGoods == 1) {
+                                        System.out.println("To quell the chaos, you offer your lone can of soup, but they thought you were pulling out a pistol and shoot you three times at once in the head.\nYou die.");
+                                    } else {
+                                        System.out.println("To quell the chaos, you pull out your can of ... \n...Oh wait, you don't have another can of stew. Shoot. \nThe three dudes kick you out of the hut into the snowstorm outside. \nYou freeze to death.");
+                                    }
                                 } else {
                                     System.out.println("You pull out you rifle. \nYou immediately get shot three times at once. \nYou die.");
                                 }
+                            } else {// no gun, die from starvation or somethung idk
+                                
                             }
-                        } else { //goes to the other thing
+                        } else { //goes to the other hut thing
 
                         }
     //tbd
