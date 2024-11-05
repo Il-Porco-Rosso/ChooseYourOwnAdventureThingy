@@ -4,10 +4,10 @@ public class ChooseYourOwnAdventureThingy
 {
     public static void main(String[] args)
     {
-        int cannedGoods = 0;
-        int freshFood = 0;
+        int cannedgoods = 0;
+        int freshfood = 0;
         int gun = 0;
-        int day = 0;
+        int dayspasssedsincestarting = 0;
 
         int coin;
 
@@ -20,7 +20,7 @@ public class ChooseYourOwnAdventureThingy
             } else {
                 System.out.println("You try to jump over, but you slip and fall into the trench anyway.");
             } //cannon trench exploring + food
-            border(2); //------------------------------
+            border(2); //------------------------------------------------------------------
             System.out.println("The trench is long and full of snow.\nPanels and boards line the sides as far as the trench goes. \nSpent shell casings are buried in the ground. \nA few steps away is what looks like two snowed-in bunkers, well, only one is snowed-in, the other is boarded up. \nWhich one would you like to go in?");
             if (prompt("the snowed-in one", "the boarded up one")) {
                 System.out.println("You dig your way in. \nInside is a small, cramped room with poorly held dirt walls, held by dry wood panels.\nThe ceiling is only held up by one plank.\nOther than the first few feet, there is no light. \nHow will you light up the room?");
@@ -28,7 +28,7 @@ public class ChooseYourOwnAdventureThingy
                     System.out.println("You get out some flamable material and light it with a match. \nThe bits of sticks dont light easily, so you blow a bit of air into the pile. \nEventually, the fire flares up. \nHooray! \n...but because it's a small room, the fire spreads to the dry wood, inches away from the pile, setting the only thing holding the dirt up on fire. \nSoon after, all the dirt falls on top of you and you suffocate to death.");
                 } else {
                     System.out.println("You pull out your flashlight and look around. \nIt's a very small room with nothing but a box of rifles on the other side. \nAlthough, on closer inspection, there is a can of pork stew sitting in the box.");
-                    cannedGoods++;
+                    cannedgoods++;
                     System.out.println("Hurrah!! \nWell, actually, you can only assume it's pork stew. \nIt's written in some language you don't know, but there's a drawing of a pig swimming in a bowl. \nSo cool beans I guess.");
                     border(2); //----------------------------
                     System.out.println("While you're at it, would you like to pick up one of the rifles and some ammo? You know, self defence?");
@@ -40,12 +40,12 @@ public class ChooseYourOwnAdventureThingy
                     }
                     border(2);
                     System.out.print("You climb back out into the snowy trench and back out to the snowy landscape. \nYou walk forward for what seems like forever. \nThe only colors you've seen being just white, white, white, and light grey. \nAt some point, you reach a hill with some trees on it. ");
-                    if (cannedGoods >= 1) {
+                    if (cannedgoods >= 1) {
                         System.out.println("Would you like to heat up and eat the pork stew?");
                         if (promptYesOrNo()) {
                             System.out.println("You had been getting hungry after all!");
                             border(1);
-                            cannedGoods--;
+                            cannedgoods--;
                             System.out.println("Turns out it wasn't pork stew, but creamy pork and mushroom stew. \nThe pig wasn't swimming in a bowl, it was lying on a mushroom.");
                             border(2);
                             System.out.println("Though the soup was good, snow had started to fall down harder than usual and the wind had sped up. \nYou sense a snowstorm coming.\nWhat will you do?");
@@ -56,11 +56,11 @@ public class ChooseYourOwnAdventureThingy
                                 if (prompt("shoot it", "let it live")) {
                                     System.out.println("You point the barrel of the rifle at the head of the poor bunny and pull the trigger.");
                                     border(1);
-                                    freshFood ++;
+                                    freshfood ++;
                                     System.out.print("After skinning the rabbit and dousing it in a good bit of spare salt and flavoring,");
                                 } else {
                                     System.out.println("Of course, there is no need for extra suffering. You brought the gun for self defence after all. \nAlthough, on closer inspection, there is something behind the rabbit. \nYou walk over and discover a white pouch with two cans of soup!");
-                                    cannedGoods += 2;
+                                    cannedgoods += 2;
                                     System.out.println("Ahh, the fruits of your labor.");
                                     border(1);
                                     System.out.print("After putting away the cans,");
@@ -87,12 +87,12 @@ public class ChooseYourOwnAdventureThingy
                         System.out.println("You sit down and wait. \nYou sit and wait. \nSit and wait. \nSit, wait. \nWait. \nwait \nwai");
                         border(0);
                         System.out.print("Because you were stupid enough to try to endure a snowstorm,");
-                        if (freshFood >= 1) {
+                        if (freshfood >= 1) {
                             System.out.println(" you and your rabbit freeze, preserving the rabbit and killing you.");
                         } else {
-                            if (cannedGoods > 1) {
+                            if (cannedgoods > 1) {
                                 System.out.println(" you and your cans of soup freeze to death.");
-                            } else if (cannedGoods == 1) {
+                            } else if (cannedgoods == 1) {
                                 System.out.println(" you and your pig stew freeze to death.");
                             } else {
                                 System.out.println(" you and your empty bag freeze to death. \nSo sad.");
@@ -109,14 +109,29 @@ public class ChooseYourOwnAdventureThingy
                                 coin =prompt("run away", "offer food", "shoot them");
                                 if (coin == 1) {
                                     System.out.println("You try to turn and run and you make it out. \nThere is a snow storm outside. \nSo, you go back in. \nThey immediately shoot you as you open the door.");
-                                } else if (coin ==2) {//"cannon" end (cannon end is in a different branch)
-                                    if (freshFood > 0 || cannedGoods > 1) {
-                                        if (freshFood > 0) {
+                                } else if (coin ==2) {//"cannon" end (cannon end is in a different branch)---------------------------------------------------------------
+                                    if (freshfood > 0 || cannedgoods > 1) {
+                                        if (freshfood > 0) {
                                             System.out.println("To quell the chaos, you pull out your trump card of trump cards... \n...you show them the rabbit meat. \nThe three guys then stop, look at each other, and look at you again.\nThey put the rifles down and one chuckles. \nThey welcome you in.");
-                                        } else if (cannedGoods > 1) {
+//do stuff here too                         
+                                            border(1);
+                                            System.out.println("You and the three dudes roast the rabbit and enjoy the best meal you've all had since you all got stuck in the white snowscape. \nThe night goes by quick.");
+                                            dayspasssedsincestarting++;
+                                            freshfood--;
+                                            border(0);
+
+                                        } else if (cannedgoods > 1) {
                                             System.out.println("To quell the chaos, you pull out your cans of soup and offer it to them, trying your best not to look like you're pulling out another weapon. \nThe three guys the stop to put their rifles back down.\nOne of them gets some cans of their own out of their parka. \nThey go up to you and compare their cans to yours. \nTheirs: clam pasta, yours: pork stew & soup. \nThe one in front of you smiles and they welcome you in.");
-                                        }
-                                    } else if (cannedGoods == 1) {
+               //do stuff                             
+                                            border(1);
+                                            System.out.println("You and the three dudes in black parkas enjoy their cans of pasta, and one of your cans of soup together.\nProbably the best meal you've had in a while in the snowy nothingness. \nThe night goes by quick.");
+                                            dayspasssedsincestarting++;
+                                            cannedgoods--;
+                                            border(0);
+                                        }//======main=thing===========================================================
+
+                                        //============================================================================
+                                    } else if (cannedgoods == 1) {
                                         System.out.println("To quell the chaos, you offer your lone can of soup, but they thought you were pulling out a pistol and shoot you three times at once in the head.\nYou die.");
                                     } else {
                                         System.out.println("To quell the chaos, you pull out your can of ... \n...Oh wait, you don't have another can of stew. Shoot. \nThe three dudes kick you out of the hut into the snowstorm outside. \nYou freeze to death.");
@@ -142,7 +157,7 @@ public class ChooseYourOwnAdventureThingy
             //====================================================================================================
 
             } else { //cannon route (goes in boarded bunker with thr dude)
-
+                System.out.println("hehy I didn't make the story yet lol");
             }
 
 
@@ -164,7 +179,7 @@ public class ChooseYourOwnAdventureThingy
         Scanner sc = new Scanner(System.in);
         boolean validAnswer = false;
         String userAnswer = "";
-        while (!validAnswer)
+        for (;!validAnswer;)
         {
             System.out.println("=====================================================");
             System.out.print("Answer yes or no: ");
@@ -188,7 +203,7 @@ public class ChooseYourOwnAdventureThingy
         Scanner sc = new Scanner(System.in);
         boolean validAnswer = false;
         String userAnswer = "";
-        while (!validAnswer) {
+        for (;!validAnswer;) {
             System.out.println("=====================================================");
             System.out.print("Answer "+optionA+" or "+optionB+": ");
             userAnswer = sc.nextLine();
