@@ -113,7 +113,7 @@ public class ChooseYourOwnAdventureThingy
                                     if (freshFood > 0 || cannedGoods > 1) {
                                         if (freshFood > 0) {
                                             System.out.println("To quell the chaos, you pull out your trump card of trump cards... \n...you show them the rabbit meat. \nThe three guys then stop, look at each other, and look at you again.\nThey put the rifles down and one chuckles. \nThey welcome you in.");
-                                        } else (cannedGoods > 1) {
+                                        } else if (cannedGoods > 1) {
                                             System.out.println("To quell the chaos, you pull out your cans of soup and offer it to them, trying your best not to look like you're pulling out another weapon. \nThe three guys the stop to put their rifles back down.\nOne of them gets some cans of their own out of their parka. \nThey go up to you and compare their cans to yours. \nTheirs: clam pasta, yours: pork stew & soup. \nThe one in front of you smiles and they welcome you in.");
                                         }
                                     } else if (cannedGoods == 1) {
