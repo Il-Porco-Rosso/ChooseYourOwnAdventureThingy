@@ -129,7 +129,14 @@ public class ChooseYourOwnAdventureThingy
                                             cannedgoods--;
                                             border(0);
                                         }//======main=thing===========================================================
+                                        System.out.println("One day has passed. \nThe three guys in black parkas are outside, talking about something. \nWhat do you want to do?");
+                                        if (prompt("go outside and maybe follow them", "stay inside and wait for them to go")) {
+                                            //go(don t matter)
+                                            System.out.println("You go outside and see them running off into the distance, as if they were being chased.\nSoon after, two men on horses arrive behind you coming from the opposite direction of where the trio were headed.\nThe two men dismount and hurry you back into the hut you were in. They wore basic winter gear, both wearing scarves. One of them wears a beanie, the other wears shades and a backwards cap.\nMost importantly, they speak English.");
+                                        } else {
+                                            //stay
 
+                                        }
                                         //============================================================================
                                     } else if (cannedgoods == 1) {
                                         System.out.println("To quell the chaos, you offer your lone can of soup, but they thought you were pulling out a pistol and shoot you three times at once in the head.\nYou die.");
