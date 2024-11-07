@@ -132,10 +132,16 @@ public class ChooseYourOwnAdventureThingy
                                         System.out.println("One day has passed. \nThe three guys in black parkas are outside, talking about something. \nWhat do you want to do?");
                                         if (prompt("go outside and maybe follow them", "stay inside and wait for them to go")) {
                                             //go(don t matter)
-                                            System.out.println("You go outside and see them running off into the distance, as if they were being chased.\nSoon after, two men on horses arrive behind you coming from the opposite direction of where the trio were headed.\nThe two men dismount and hurry you back into the hut you were in. They wore basic winter gear, both wearing scarves. One of them wears a beanie, the other wears shades and a backwards cap.\nMost importantly, they speak English.");
+                                            System.out.println("You go outside and see them running off into the distance, as if they were being chased.\nSoon after, two men on horses arrive behind you coming from the opposite direction of where the trio were headed.\nThe two men dismount and hurry you back into the hut you were in. They wear basic winter gear, both also with scarves. One of them wears a beanie, the other wears shades and a backwards cap.\nMost importantly, they speak English.");
                                         } else {
                                             //stay
-
+                                            System.out.println("You wait, and you hear the three dudes quickly running away. \nRight after, what sounds like two horses arrive right in front of the hut.\nTwo men bust through the door.\nThey wear basic winter gear, both also with scarves. One of them wears a beanie, the other wears shades and a backwards cap.\nMost importantly, they speak English.");
+                                        }
+                                        System.out.println("    'What are YOU doing here!!??' Says the one in shades. \n    'You think he's one of them?' Whispers the other.\n     'Doubt it.'\nHow will you respond?");
+                                        if (prompt("say 'I was lost'", "tell them the whole story")) {
+                                            
+                                        } else {
+                                            
                                         }
                                         //============================================================================
                                     } else if (cannedgoods == 1) {
