@@ -139,9 +139,14 @@ public class ChooseYourOwnAdventureThingy
                                         }
                                         System.out.println("    'What are YOU doing here!!??' Says the one in shades. \n    'You think he's one of them?' Whispers the other.\n     'Doubt it.'\nHow will you respond?");
                                         if (prompt("say 'I was lost'", "tell them the whole story")) {
-                                            
+                                            System.out.println("The one in shades replies, 'You were lost but you stayed the night with the three mercinaries?' \n      'He's totally one of them.' \n      'Yeah, let's get out of here.' \nThe two men head out ond leave on horseback, not before throwing you out in the snow and boaring up all of the doors. \nIt's not long before another snowstorm hits and you freeze to death.");
                                         } else {
-                                            
+                                            System.out.println("The one in shades replies, 'Really? That's awesome.' \n     'I didn't know the three mercinaries had a friendly side.'\n      'Me neither.'\n       'Hey, if you come with us, we can take you home. What do you say?'");
+                                            if (prompt("ok", "I want to stay")) {
+                                                System.out.println("The horsemen take you with them outside and throw you onto one of the horses. \nThe one in shades gets on the other horse and the other guy gets on with you. \nYou three go off over a hill toward the sun. \nBefore long, you grow tired and fall asleep. \nWhen you wake up, you're on a ship, in an italian restaurant.");
+                                            } else {
+
+                                            }
                                         }
                                         //============================================================================
                                     } else if (cannedgoods == 1) {
@@ -170,7 +175,7 @@ public class ChooseYourOwnAdventureThingy
             //====================================================================================================
 
             } else { //cannon route (goes in boarded bunker with thr dude)
-                System.out.println("hehy I didn't make the story yet lol");
+                System.out.println("hehy I didn't make that part of the story yet lol");
             }
 
 
