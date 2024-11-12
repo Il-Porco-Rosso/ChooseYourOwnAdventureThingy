@@ -137,14 +137,27 @@ public class ChooseYourOwnAdventureThingy
                                             //stay
                                             System.out.println("You wait, and you hear the three dudes quickly running away. \nRight after, what sounds like two horses arrive right in front of the hut.\nTwo men bust through the door.\nThey wear basic winter gear, both also with scarves. One of them wears a beanie, the other wears shades and a backwards cap.\nMost importantly, they speak English.");
                                         }
-                                        System.out.println("    'What are YOU doing here!!??' Says the one in shades. \n    'You think he's one of them?' Whispers the other.\n     'Doubt it.'\nHow will you respond?");
+                                        System.out.println("    'What are YOU doing here!!??' Says the one in shades. \n    'You think he's one of them?' Whispers the other.\n    'Doubt it.'\nHow will you respond?");
                                         if (prompt("say 'I was lost'", "tell them the whole story")) {
-                                            System.out.println("The one in shades replies, 'You were lost but you stayed the night with the three mercinaries?' \n      'He's totally one of them.' \n      'Yeah, let's get out of here.' \nThe two men head out ond leave on horseback, not before throwing you out in the snow and boaring up all of the doors. \nIt's not long before another snowstorm hits and you freeze to death.");
+                                            System.out.println("The one in shades replies, 'You were lost but you stayed the night with the three mercinaries?' \n    'He's totally one of them.' \n    'Yeah, let's get out of here.' \nThe two men head out ond leave on horseback, not before throwing you out in the snow and boaring up all of the doors. \nIt's not long before another snowstorm hits and you freeze to death.");
                                         } else {
-                                            System.out.println("The one in shades replies, 'Really? That's awesome.' \n     'I didn't know the three mercinaries had a friendly side.'\n      'Me neither.'\n       'Hey, if you come with us, we can take you home. What do you say?'");
+                                            System.out.println("The one in shades replies, 'Really? That's awesome.' \n    'I didn't know the three mercinaries had a friendly side.'\n    'Me neither.'\n    'Hey, if you come with us, we can take you home. What do you say?'");
                                             if (prompt("ok", "I want to stay")) {
                                                 System.out.println("The horsemen take you with them outside and throw you onto one of the horses. \nThe one in shades gets on the other horse and the other guy gets on with you. \nYou three go off over a hill toward the sun. \nBefore long, you grow tired and fall asleep. \nWhen you wake up, you're on a ship, in an italian restaurant.");
-                                            } else {
+                                                border(2);
+                                                System.out.println("    'Oh look, you're finally awake.' It's the other man, the one in the beanie. \n'Mick said he'd be back in a few. Always off to gamble when he gets the chance.'");
+                                                coin = 0;
+                                                for (;coin != 3;) {
+                                                    System.out.println("What will you ask him?");
+                                                    coin = prompt("'Where are we?'", "'Where is my stuff?'", "stop asking");
+                                                    if (coin == 1) {
+                                                        System.out.println("    'We're on a ship moving westward. \nMick said that he wanted to treat himself on the way home this time. \nWhen we found you, we chipped in to buy you a cheap ticket.'");
+                                                    } else if (coin == 2) {
+                                                        System.out.println("    'Oh, your stuff? \nWell, sorry about your gun, but we had to leave that in the snow.\nI got your other stuff packed in here though.' \nHe pulls out a small bag on his lap.");
+                                                    }
+                                                }
+                                                border(2);
+                                            } else { //stay for some reason
 
                                             }
                                         }
