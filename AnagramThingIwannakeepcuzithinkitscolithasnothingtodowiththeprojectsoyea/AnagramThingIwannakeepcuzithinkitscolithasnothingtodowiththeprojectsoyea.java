@@ -1,3 +1,5 @@
+package AnagramThingIwannakeepcuzithinkitscolithasnothingtodowiththeprojectsoyea;
+
 import java.util.Scanner;
 public class AnagramThingIwannakeepcuzithinkitscolithasnothingtodowiththeprojectsoyea{
     public static void main(String[] args){Scanner sc = new Scanner(System.in);System.out.println("Enter a String: ");String qwer = sc.nextLine();System.out.println("Enter a String: ");String asdf = sc.nextLine(); int zxcv = 0;int poiu = 0; for (;qwer.indexOf(" ") != -1;) {if(qwer.indexOf(" ") == 0){qwer = qwer.substring(1);}qwer = qwer.substring(0,qwer.indexOf(" ")) + qwer.substring(qwer.indexOf(" ")+1);}for (;asdf.indexOf(" ") != -1;) {if(asdf.indexOf(" ") == 0){asdf = asdf.substring(1);}asdf = asdf.substring(0,asdf.indexOf(" ")) + asdf.substring(asdf.indexOf(" ")+1);}System.out.println(asdf);System.out.println(qwer); 
