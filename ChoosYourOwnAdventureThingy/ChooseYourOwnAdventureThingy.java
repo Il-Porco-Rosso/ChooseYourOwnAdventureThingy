@@ -11,7 +11,7 @@ public class ChooseYourOwnAdventureThingy
 
         int coin;
 
-        border(5);
+        border(5); 
         System.out.println("The snow covers all the eye can see. Only hills and a handful of trees dot the grey and white landscape. \nWould you like to venture forth?");
         if (promptYesOrNo()) { //cannon path
             System.out.println("You walk forward and reach a hill. \nOver the hill, you see a long trench at the bottom with wood bracing holding the dirt and snow from collapsing the trench.\nDo you want to explore it or try to jump over?");
@@ -158,7 +158,7 @@ public class ChooseYourOwnAdventureThingy
                                                 }
                                                 border(2);
                                             } else { //stay for some reason
-
+                                                System.out.println("You say to stay, so the dudes leave. \nAnyway, the writer is getting bored writing the story so after the 2 douches leave you fall asleep and wake up in bed, with bowls of pork and mushroom soup on the bedside. \n");
                                             }
                                         }
                                         //============================================================================
